@@ -8,7 +8,6 @@ import Manifesto from "@/components/sections/Manifesto";
 import ClientConfidential from "@/components/sections/ClientConfidential";
 import MemberPass from "@/components/sections/MemberPass";
 import Paparazzi from "@/components/ui/Paparazzi";
-import Experience from "@/components/sections/Experience";
 import Protocol from "@/components/sections/Protocol";
 import Preloader from "@/components/ui/Preloader";
 import CustomCursor from "@/components/ui/CustomCursor";

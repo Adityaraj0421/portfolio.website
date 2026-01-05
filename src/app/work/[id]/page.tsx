@@ -204,8 +204,12 @@ export default function CaseStudyPage() {
 
             {/* Next Project Footer */}
             <Link href={`/work/${project.next}`} className="group block relative w-full h-[50vh] overflow-hidden border-b border-white/5">
-                <div className="absolute inset-0 bg-neutral-900 transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-neutral-900 overflow-hidden">
+                    <div className="w-full h-full bg-neutral-800 transition-transform duration-[1.5s] ease-out group-hover:scale-105 origin-center">
+                        {/* Placeholder for future image, currently abstract color */}
+                        <div className="w-full h-full bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                    </div>
+                </div>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
                     <span className="font-inter text-xs text-white/50 uppercase tracking-widest mb-4">Next Project</span>

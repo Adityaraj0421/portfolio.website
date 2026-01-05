@@ -66,13 +66,13 @@ export default function MemberPass() {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative w-full h-[80vh] flex items-center justify-center bg-matte-black perspective-[1000px] overflow-hidden">
+        <section ref={containerRef} className="relative w-full min-h-screen flex flex-col items-center justify-center bg-matte-black perspective-[1000px] overflow-hidden py-24">
             {/* Background Context */}
             <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-20">
                 <div className="w-[500px] h-[500px] bg-white/5 blur-[120px] rounded-full animate-pulse" />
             </div>
 
-            <div className="absolute top-12 md:top-24 text-center z-0 pointer-events-none">
+            <div className="relative text-center z-10 mb-12">
                 <h3 className="font-syne text-2xl text-off-white font-bold uppercase tracking-widest mb-2">My Card</h3>
                 <p className="font-inter text-xs text-white/40 uppercase tracking-[0.3em]">Hover to Interact</p>
             </div>

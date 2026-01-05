@@ -58,13 +58,13 @@ export default function Hero() {
 
 
             {/* Main Title: Chrome Gradient */}
-            <div className="relative z-10 w-full text-center mix-blend-normal">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-16 text-xs font-inter text-off-white/60 tracking-[0.5em] uppercase opacity-80">
+            <div className="relative z-10 w-full text-center mix-blend-normal padding-bottom-safe">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-16 md:-translate-y-16 text-[10px] md:text-xs font-inter text-off-white/60 tracking-[0.5em] uppercase opacity-80 whitespace-nowrap">
                     Product Designer
                 </div>
                 <h1
                     ref={textRef}
-                    className="font-syne text-[14vw] font-bold leading-[0.8] tracking-tighter uppercase select-none opacity-0 transition-all duration-1000 ease-[cubic-bezier(0.6,0.01,-0.05,0.95)] hover:tracking-normal cursor-default text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-500 drop-shadow-2xl"
+                    className="font-syne text-[18vw] md:text-[14vw] font-bold leading-[0.8] tracking-tighter uppercase select-none opacity-0 transition-all duration-1000 ease-[cubic-bezier(0.6,0.01,-0.05,0.95)] hover:tracking-normal cursor-default text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-500 drop-shadow-2xl"
                 >
                     VISUAL
                     <br />
@@ -75,15 +75,15 @@ export default function Hero() {
             {/* Subtext: Minimalist Status Indicators */}
             <div
                 ref={subTextRef}
-                className="absolute bottom-12 left-0 w-full flex justify-between px-8 md:px-16 text-off-white/80 font-inter text-xs uppercase tracking-widest opacity-0 z-20"
+                className="absolute bottom-8 md:bottom-12 left-0 w-full flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 px-8 md:px-16 text-off-white/80 font-inter text-xs uppercase tracking-widest opacity-0 z-20"
             >
-                <div className="flex flex-col gap-1">
+                <div className="hidden md:flex flex-col gap-1 text-left">
                     <span>Est. 2026</span>
                     <span className="text-[10px] text-white/40">Remote Capable</span>
                 </div>
 
-                {/* Center Badge */}
-                <div className="hidden md:flex items-center gap-2 border border-white/10 rounded-full px-4 py-1 backdrop-blur-md">
+                {/* Center Badge - Visible on Mobile too now? No, keep hidden or minimal */}
+                <div className="flex items-center gap-2 border border-white/10 rounded-full px-4 py-1 backdrop-blur-md">
                     <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                     <span className="text-[10px]">Open for Contracts</span>
                 </div>

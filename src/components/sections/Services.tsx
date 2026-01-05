@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -87,6 +87,7 @@ function ServiceItem({ service, index }: { service: typeof services[0], index: n
     const imageRef = useRef<HTMLImageElement>(null);
     const cursor = useRef({ x: 0, y: 0 });
     const imagePos = useRef({ x: 0, y: 0 });
+    const [isOpen, setIsOpen] = useState(false);
 
     useGSAP(() => {
         const xSet = gsap.quickSetter(imageRef.current, "x", "px");
@@ -115,32 +116,41 @@ function ServiceItem({ service, index }: { service: typeof services[0], index: n
         <div
             ref={containerRef}
             onMouseMove={handleMouseMove}
-            className="group relative flex w-full items-center justify-between border-b border-white/10 py-12 px-4 transition-all duration-500 hover:bg-white/5 overflow-hidden cursor-none"
+            onClick={() => setIsOpen(!isOpen)}
+            className="group relative flex flex-col width-full border-b border-white/10 transition-all duration-500 hover:bg-white/5 overflow-hidden cursor-pointer md:cursor-none"
         >
-            {/* Hover Image Reveal */}
-            <img
-                ref={imageRef}
-                src={service.image}
-                alt={service.title}
-                className="absolute top-0 left-0 w-[300px] h-[200px] object-cover opacity-0 group-hover:opacity-40 pointer-events-none grayscale transition-opacity duration-500 z-0 mix-blend-screen rounded-sm"
-            // style={{ filter: "url(#liquidFilter)" }} // Disabled for 60FPS performance
-            />
+            <div className="flex w-full items-center justify-between py-8 md:py-12 px-4 relative z-20">
+                {/* Hover Image Reveal (Desktop Only) */}
+                <img
+                    ref={imageRef}
+                    src={service.image}
+                    alt={service.title}
+                    className="hidden md:block absolute top-0 left-0 w-[300px] h-[200px] object-cover opacity-0 group-hover:opacity-40 pointer-events-none grayscale transition-opacity duration-500 z-0 mix-blend-screen rounded-sm"
+                />
 
-            <div className="relative z-10 flex items-baseline gap-8">
-                <span className="font-inter text-xs text-white/30 font-medium">0{index + 1}</span>
-                <h3 className="font-syne text-3xl md:text-5xl font-bold uppercase text-off-white group-hover:text-white group-hover:translate-x-4 transition-all duration-500">
-                    {service.title}
-                </h3>
+                <div className="flex items-center gap-6 md:gap-8">
+                    <span className="font-inter text-xs text-white/30 font-medium">0{index + 1}</span>
+                    <h3 className="font-syne text-2xl md:text-5xl font-bold uppercase text-off-white group-hover:text-white md:group-hover:translate-x-4 transition-all duration-500">
+                        {service.title}
+                    </h3>
+                </div>
+
+                <div className="hidden md:block">
+                    <p className="font-inter text-xs uppercase tracking-widest text-white/40 group-hover:text-white/80 transition-colors">
+                        {service.description}
+                    </p>
+                </div>
+
+                <div className={`md:hidden text-white/20 text-xl font-light transition-transform duration-300 ${isOpen ? "rotate-45 text-white" : ""}`}>
+                    +
+                </div>
             </div>
 
-            <div className="relative z-10 hidden md:block">
-                <p className="font-inter text-xs uppercase tracking-widest text-white/40 group-hover:text-white/80 transition-colors">
+            {/* Mobile Expanded Content */}
+            <div className={`md:hidden px-4 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-32 opacity-100 pb-8" : "max-h-0 opacity-0"}`}>
+                <p className="font-inter text-sm text-white/60 leading-relaxed border-l border-white/20 pl-4">
                     {service.description}
                 </p>
-            </div>
-
-            <div className="relative z-10 md:hidden text-white/20 text-xl font-light">
-                +
             </div>
         </div>
     );

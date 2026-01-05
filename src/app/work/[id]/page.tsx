@@ -135,7 +135,7 @@ export default function CaseStudyPage() {
                         <span className="font-mono text-xs text-white border border-white/20 px-2 py-1 rounded-full">{project.category}</span>
                         <span className="font-mono text-xs text-white/40">{project.year}</span>
                     </div>
-                    <h1 className="font-syne text-5xl md:text-8xl font-bold uppercase leading-[0.9] tracking-tight mb-8 animate-in">
+                    <h1 className="font-syne text-4xl md:text-8xl font-bold uppercase leading-[0.9] tracking-tight mb-8 animate-in">
                         {project.title}
                     </h1>
                     <p className="font-inter text-lg md:text-xl text-white/60 max-w-2xl animate-in">
@@ -209,7 +209,7 @@ export default function CaseStudyPage() {
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
                     <span className="font-inter text-xs text-white/50 uppercase tracking-widest mb-4">Next Project</span>
-                    <h2 className="font-syne text-5xl md:text-7xl font-bold text-white group-hover:scale-110 transition-transform duration-700">
+                    <h2 className="font-syne text-4xl md:text-7xl font-bold text-white group-hover:scale-110 transition-transform duration-700">
                         {projects[project.next as keyof typeof projects].title}
                     </h2>
                 </div>

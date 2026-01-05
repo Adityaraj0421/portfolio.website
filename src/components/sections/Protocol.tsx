@@ -87,7 +87,7 @@ export default function Protocol() {
                             id={`protocol-card-${index}`}
                             className="flex h-[80vh] md:h-screen w-full flex-col justify-center p-8 md:p-24 border-b border-matte-black/5 last:border-0"
                         >
-                            <h3 className="font-syne text-6xl md:text-7xl font-bold uppercase mb-8 text-matte-black">
+                            <h3 className="font-syne text-4xl md:text-7xl font-bold uppercase mb-8 text-matte-black">
                                 {step.title}
                             </h3>
                             <p className="font-inter text-xl md:text-2xl text-matte-black/70 leading-relaxed max-w-md">

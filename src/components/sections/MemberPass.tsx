@@ -80,7 +80,7 @@ export default function MemberPass() {
             {/* THE CARD */}
             <div
                 ref={cardRef}
-                className="relative w-[340px] h-[540px] md:w-[400px] md:h-[630px] rounded-[24px] bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-black border border-white/10 shadow-2xl flex flex-col p-8 transform-style-3d group cursor-default overflow-hidden ring-1 ring-white/5"
+                className="relative w-[85vw] max-w-[340px] h-[60vh] max-h-[540px] md:w-[400px] md:h-[630px] rounded-[24px] bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-black border border-white/10 shadow-2xl flex flex-col p-6 md:p-8 transform-style-3d group cursor-default overflow-hidden ring-1 ring-white/5"
             >
                 {/* Metallic Shine/Glow Layer */}
                 <div

@@ -23,11 +23,11 @@ export default function MagneticButton({
 
         if (!button || !text) return;
 
-        const xTo = gsap.quickTo(button, "x", { duration: 1, ease: "power4.out" });
-        const yTo = gsap.quickTo(button, "y", { duration: 1, ease: "power4.out" });
+        const xTo = gsap.quickTo(button, "x", { duration: 1.5, ease: "elastic.out(1, 0.3)" });
+        const yTo = gsap.quickTo(button, "y", { duration: 1.5, ease: "elastic.out(1, 0.3)" });
 
-        const textXTo = gsap.quickTo(text, "x", { duration: 1, ease: "power4.out" });
-        const textYTo = gsap.quickTo(text, "y", { duration: 1, ease: "power4.out" });
+        const textXTo = gsap.quickTo(text, "x", { duration: 1.2, ease: "power2.out" });
+        const textYTo = gsap.quickTo(text, "y", { duration: 1.2, ease: "power2.out" });
 
         const handleMouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
@@ -36,11 +36,11 @@ export default function MagneticButton({
             const x = clientX - (left + width / 2);
             const y = clientY - (top + height / 2);
 
-            xTo(x * 0.5); // Increase strength
-            yTo(y * 0.5);
+            xTo(x * 0.35); // Heavier feel (lower multiplier)
+            yTo(y * 0.35);
 
-            textXTo(x * 0.7); // Text follows more aggressively
-            textYTo(y * 0.7);
+            textXTo(x * 0.25); // Parallax lag
+            textYTo(y * 0.25);
         };
 
         const handleMouseLeave = () => {

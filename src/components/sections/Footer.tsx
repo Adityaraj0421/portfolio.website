@@ -27,9 +27,8 @@ export default function Footer() {
                 <div className="flex gap-16 font-inter text-xs uppercase tracking-widest text-off-white/40">
                     <div className="flex flex-col gap-4">
                         <span className="text-white/20 mb-2">// Socials</span>
-                        <a href="#" className="hover:text-white transition-colors">Instagram</a>
-                        <a href="#" className="hover:text-white transition-colors">Twitter</a>
-                        <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+                        <a href="https://www.instagram.com/kang.0421/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+                        <a href="https://www.linkedin.com/in/aditya-raj-186509143" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
                     </div>
                     <div className="flex flex-col gap-4">
                         <span className="text-white/20 mb-2">// Legal</span>
@@ -39,7 +38,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-4">
                         <span className="text-white/20 mb-2">// Contact</span>
-                        <a href="mailto:hello@aditya.design" className="hover:text-white transition-colors">hello@aditya.design</a>
+                        <a href="mailto:kang.applies@gmail.com" className="hover:text-white transition-colors">kang.applies@gmail.com</a>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,23 @@ if (typeof window !== "undefined") {
 }
 
 // Mock Data for Case Studies
-const projects = {
+// Define Project Interface
+interface Project {
+    title: string;
+    category: string;
+    year: string;
+    client: string;
+    link?: string;
+    status?: string;
+    description: string;
+    challenge: string;
+    solution: string;
+    metrics: { label: string; value: string }[];
+    next: string;
+}
+
+// Mock Data for Case Studies
+const projects: Record<string, Project> = {
     "claussal-ai": {
         title: "Claussal.ai",
         category: "Legal Tech AI",

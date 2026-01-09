@@ -72,10 +72,7 @@ export default function MemberPass() {
                 <div className="w-[500px] h-[500px] bg-white/5 blur-[120px] rounded-full animate-pulse" />
             </div>
 
-            <div className="relative text-center z-10 mb-12">
-                <h3 className="font-syne text-2xl text-off-white font-bold uppercase tracking-widest mb-2">My Card</h3>
-                <p className="font-inter text-xs text-white/40 uppercase tracking-[0.3em]">Hover to Interact</p>
-            </div>
+
 
             {/* THE CARD */}
             <div

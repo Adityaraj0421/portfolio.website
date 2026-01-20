@@ -77,7 +77,7 @@ export default function MemberPass() {
             {/* THE CARD */}
             <div
                 ref={cardRef}
-                className="relative w-[85vw] max-w-[340px] h-[60vh] max-h-[540px] md:w-[400px] md:h-[630px] rounded-[24px] bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-black border border-white/10 shadow-2xl flex flex-col p-6 md:p-8 transform-style-3d group cursor-default overflow-hidden ring-1 ring-white/5"
+                className="relative w-[85vw] max-w-[340px] h-[65vh] max-h-[600px] md:w-[400px] md:h-[680px] rounded-[24px] bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-black border border-white/10 shadow-2xl flex flex-col p-6 md:p-8 transform-style-3d group cursor-default overflow-hidden ring-1 ring-white/5"
             >
                 {/* Metallic Shine/Glow Layer */}
                 <div
@@ -139,16 +139,23 @@ export default function MemberPass() {
                             </ul>
                         </div>
 
-                        {/* Education */}
-                        <div className="flex flex-col gap-4 mt-auto">
+                        {/* Education & Certs */}
+                        <div className="flex flex-col gap-2 mt-auto">
                             <h4 className="font-inter text-[9px] text-white/30 uppercase tracking-[0.2em] font-semibold">Credentials</h4>
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <span className="block font-syne text-xs text-white/80 font-medium mb-1">B.Tech in ECE</span>
-                                    <span className="block font-inter text-[9px] text-white/40 uppercase tracking-wide">IIIT Guwahati</span>
-                                    <span className="block font-mono text-[8px] text-white/20 mt-1">2022-2026</span>
+                            <div className="grid grid-cols-1 gap-3">
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <span className="block font-syne text-xs text-white/80 font-medium mb-1">B.Tech in ECE</span>
+                                        <span className="block font-inter text-[9px] text-white/40 uppercase tracking-wide">IIIT Guwahati</span>
+                                        <span className="block font-mono text-[8px] text-white/20 mt-1">2022-2026</span>
+                                    </div>
+                                    <div>
+                                        <span className="block font-syne text-xs text-white/80 font-medium mb-1">Google UX Design</span>
+                                        <span className="block font-inter text-[9px] text-white/40 uppercase tracking-wide">Certification</span>
+                                        <span className="block font-mono text-[8px] text-white/20 mt-1">May-Sep 2024</span>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className="border-t border-white/5 pt-3">
                                     <span className="block font-syne text-xs text-white/80 font-medium mb-1">Designer in Residence</span>
                                     <span className="block font-inter text-[9px] text-white/40 uppercase tracking-wide">10K Designers</span>
                                     <span className="block font-mono text-[8px] text-white/20 mt-1">Jan-May 2025</span>

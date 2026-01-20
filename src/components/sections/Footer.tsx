@@ -7,10 +7,6 @@ export default function Footer() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    const openVault = () => {
-        window.dispatchEvent(new CustomEvent("open-vault"));
-    };
-
     return (
         <footer className="relative w-full bg-matte-black pt-32 pb-12 px-8 border-t border-white/10 overflow-hidden">
             <div className="flex flex-col md:flex-row justify-between items-end mb-24">
@@ -29,12 +25,6 @@ export default function Footer() {
                         <span className="text-white/20 mb-2">// Socials</span>
                         <a href="https://www.instagram.com/kang.0421/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
                         <a href="https://www.linkedin.com/in/aditya-raj-186509143" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-                    </div>
-                    <div className="flex flex-col gap-4">
-                        <span className="text-white/20 mb-2">// Legal</span>
-                        <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms</a>
-                        <button onClick={openVault} className="text-left hover:text-white transition-colors hover:tracking-widest duration-300">[ Locked ]</button>
                     </div>
                     <div className="flex flex-col gap-4">
                         <span className="text-white/20 mb-2">// Contact</span>

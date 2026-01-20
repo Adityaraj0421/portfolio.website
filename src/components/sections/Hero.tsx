@@ -79,13 +79,13 @@ export default function Hero() {
             >
                 <div className="hidden md:flex flex-col gap-1 text-left">
                     <span>Est. 2026</span>
-                    <span className="text-[10px] text-white/40">Remote Capable</span>
+                    <span className="text-[10px] text-white/40">Onsite and Remote Capable</span>
                 </div>
 
                 {/* Center Badge - Visible on Mobile too now? No, keep hidden or minimal */}
                 <div className="flex items-center gap-2 border border-white/10 rounded-full px-4 py-1 backdrop-blur-md">
                     <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                    <span className="text-[10px]">Open for Contracts</span>
+                    <span className="text-[10px]">Open to Work</span>
                 </div>
 
                 <div>

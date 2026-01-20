@@ -24,12 +24,24 @@ export default function CustomCursor() {
         document.body.style.cursor = "none";
 
         // Add hover listeners to links and buttons for "active" state
-        const handleMouseEnter = () => {
+        const handleMouseEnter = (e: Event) => {
+            const target = e.target as HTMLElement;
+            // Check if element wants to hide the cursor
+            if (target.getAttribute("data-hide-cursor") === "true") {
+                gsap.to(cursor, { scale: 0, duration: 0.3 });
+                return;
+            }
             gsap.to(cursor, { scale: 3, duration: 0.3 });
         };
 
-        const handleMouseLeave = () => {
-            gsap.to(cursor, { scale: 1, duration: 0.3 });
+        const handleMouseLeave = (e: Event) => {
+            const target = e.target as HTMLElement;
+            // Restore cursor visibility if it was hidden, or scale back to 1
+            if (target.getAttribute("data-hide-cursor") === "true") {
+                gsap.to(cursor, { scale: 1, duration: 0.3 });
+            } else {
+                gsap.to(cursor, { scale: 1, duration: 0.3 });
+            }
         };
 
         // Attach to interactive elements
@@ -37,7 +49,9 @@ export default function CustomCursor() {
         interactables.forEach((el) => {
             el.addEventListener("mouseenter", handleMouseEnter);
             el.addEventListener("mouseleave", handleMouseLeave);
-            el.classList.add("cursor-none"); // Ensure they don't show default cursor
+            if (!el.getAttribute("data-hide-cursor")) {
+                el.classList.add("cursor-none"); // Ensure they don't show default cursor (unless handled by component)
+            }
         });
 
         // Observer for new elements (like client-side rendered content)

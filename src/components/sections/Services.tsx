@@ -11,37 +11,37 @@ const services = [
         id: "01",
         title: "Design Systems",
         description: "Scalable component architectures.",
-        image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "/assets/services/design-systems.png"
     },
     {
         id: "02",
         title: "User Experience",
         description: "Interaction flows that convert.",
-        image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "/assets/services/user-experience.png"
     },
     {
         id: "03",
         title: "Visual Interface",
         description: "Pixel-perfect UI execution.",
-        image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "/assets/services/visual-interface.png"
     },
     {
         id: "04",
         title: "Art Direction",
         description: "Visual storytelling and brand authority.",
-        image: "https://images.pexels.com/photos/3052727/pexels-photo-3052727.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "/assets/services/art-direction.png"
     },
     {
         id: "05",
         title: "Prototyping",
         description: "High-fidelity motion interactions.",
-        image: "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "/assets/services/prototyping.png"
     },
     {
         id: "06",
         title: "Strategy",
         description: "Product roadmap and vision alignment.",
-        image: "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "/assets/services/strategy.png"
     },
 ];
 
@@ -125,7 +125,7 @@ function ServiceItem({ service, index }: { service: typeof services[0], index: n
                     ref={imageRef}
                     src={service.image}
                     alt={service.title}
-                    className="hidden md:block absolute top-0 left-0 w-[300px] h-[200px] object-cover opacity-0 group-hover:opacity-40 pointer-events-none grayscale transition-opacity duration-500 z-0 mix-blend-screen rounded-sm"
+                    className="hidden md:block absolute top-0 left-0 w-[400px] h-[250px] object-cover opacity-0 group-hover:opacity-70 pointer-events-none grayscale brightness-110 contrast-125 scale-95 group-hover:scale-105 transition-all duration-700 z-0 mix-blend-screen rounded-sm"
                 />
 
                 <div className="flex items-center gap-6 md:gap-8">

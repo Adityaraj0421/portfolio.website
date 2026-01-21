@@ -8,7 +8,7 @@ export default defineConfig({
     name: 'default',
     title: 'Fobet Media Portfolio',
 
-    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'missing-project-id',
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
 
     basePath: '/studio',

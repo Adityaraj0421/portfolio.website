@@ -77,7 +77,7 @@ export default function MemberPass() {
             {/* THE CARD */}
             <div
                 ref={cardRef}
-                className="relative w-[85vw] max-w-[340px] h-[65vh] max-h-[600px] md:w-[400px] md:h-[680px] rounded-[24px] bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-black border border-white/10 shadow-2xl flex flex-col p-6 md:p-8 transform-style-3d group cursor-default overflow-hidden ring-1 ring-white/5"
+                className="relative w-[85vw] max-w-[340px] min-h-[65vh] h-auto md:h-[680px] rounded-[24px] bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-black border border-white/10 shadow-2xl flex flex-col p-6 md:p-8 transform-style-3d group cursor-default overflow-hidden ring-1 ring-white/5"
             >
                 {/* Metallic Shine/Glow Layer */}
                 <div
@@ -95,7 +95,7 @@ export default function MemberPass() {
                 <div className="relative z-20 flex flex-col h-full">
 
                     {/* Header */}
-                    <div className="w-full flex justify-between items-start mb-10 border-b border-white/5 pb-6">
+                    <div className="w-full flex justify-between items-start mb-6 md:mb-10 border-b border-white/5 pb-6">
                         <div className="flex flex-col">
                             <h2 className="font-syne text-4xl font-bold text-white tracking-tight drop-shadow-md">ADITYA</h2>
                             <span className="font-inter text-[10px] text-white/60 uppercase tracking-[0.25em] mt-2 font-medium">Product Designer</span>
@@ -109,12 +109,12 @@ export default function MemberPass() {
                     </div>
 
                     {/* Body - Clean List */}
-                    <div className="flex-1 flex flex-col gap-8">
+                    <div className="flex-1 flex flex-col gap-4 md:gap-8">
 
                         {/* Experience */}
                         <div className="flex flex-col gap-4">
                             <h4 className="font-inter text-[9px] text-white/30 uppercase tracking-[0.2em] font-semibold">Professional History</h4>
-                            <ul className="flex flex-col gap-5">
+                            <ul className="flex flex-col gap-3 md:gap-5">
                                 <li className="relative group/item pl-4 border-l border-white/10 hover:border-white/50 transition-colors duration-300">
                                     <div className="flex justify-between items-baseline mb-0.5">
                                         <span className="font-syne text-base text-white/90 font-medium group-hover/item:text-white transition-colors">Product Designer</span>

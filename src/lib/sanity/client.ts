@@ -17,6 +17,8 @@ if (projectId === 'missing-project-id') {
     console.warn('⚠️ Sanity Project ID is missing. Build may fail during static generation.');
 }
 
+export const isConfigured = projectId !== 'missing-project-id';
+
 // Image URL builder
 const builder = imageUrlBuilder(client);
 

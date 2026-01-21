@@ -16,7 +16,7 @@ export async function getAllProjects(): Promise<ProjectListing[]> {
     featured
   }`;
 
-  return await client.fetch(query);
+  return await client.fetch(query, {}, { next: { revalidate: 60 } });
 }
 
 // GROQ query to get a single project by slug
@@ -60,14 +60,14 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
     order
   }`;
 
-  return await client.fetch(query, { slug });
+  return await client.fetch(query, { slug }, { next: { revalidate: 60 } });
 }
 
 // Get all project slugs for static generation
 export async function getProjectSlugs(): Promise<string[]> {
   if (!isConfigured) return [];
   const query = `*[_type == "project"].slug.current`;
-  return await client.fetch(query);
+  return await client.fetch(query, {}, { next: { revalidate: 60 } });
 }
 
 // Get featured projects
@@ -85,7 +85,7 @@ export async function getFeaturedProjects(): Promise<ProjectListing[]> {
     featured
   }`;
 
-  return await client.fetch(query);
+  return await client.fetch(query, {}, { next: { revalidate: 60 } });
 }
 
 // Get next project in sequence
@@ -101,5 +101,5 @@ export async function getNextProject(currentSlug: string): Promise<Project | nul
     thumbnail
   }`;
 
-  return await client.fetch(query, { currentSlug });
+  return await client.fetch(query, { currentSlug }, { next: { revalidate: 60 } });
 }

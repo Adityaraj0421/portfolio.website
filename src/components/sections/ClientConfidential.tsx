@@ -69,7 +69,7 @@ export default function ClientConfidential({ projects }: ClientConfidentialProps
                             <Link
                                 key={project._id}
                                 href={`/work/${project.slug.current}`}
-                                className="relative shrink-0 w-[85vw] md:w-[30vw] aspect-[4/5] md:aspect-[3/4] border border-white/5 flex flex-col justify-between p-8 md:p-10 bg-[#0a0a0a] hover:bg-white/5 transition-all duration-700 ease-out overflow-hidden rounded-[2px] group"
+                                className="relative shrink-0 w-[75vw] md:w-[30vw] aspect-[4/5] md:aspect-[3/4] border border-white/5 flex flex-col justify-between p-8 md:p-10 bg-[#0a0a0a] hover:bg-white/5 transition-all duration-700 ease-out overflow-hidden rounded-[2px] group"
                             >
                                 {/* Top Section */}
                                 <div className="relative z-10 w-full flex justify-between items-start border-b border-white/10 pb-6 mb-auto group-hover:border-white/30 transition-colors duration-500">

@@ -64,7 +64,7 @@ export default function Hero() {
                 </div>
                 <h1
                     ref={textRef}
-                    className="font-syne text-[18vw] md:text-[14vw] font-bold leading-[0.8] tracking-tighter uppercase select-none opacity-0 transition-all duration-1000 ease-[cubic-bezier(0.6,0.01,-0.05,0.95)] hover:tracking-normal cursor-default text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-500 drop-shadow-2xl"
+                    className="font-syne text-[13vw] md:text-[14vw] font-bold leading-[0.8] tracking-tighter uppercase select-none opacity-0 transition-all duration-1000 ease-[cubic-bezier(0.6,0.01,-0.05,0.95)] hover:tracking-normal cursor-default text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-500 drop-shadow-2xl"
                 >
                     VISUAL
                     <br />

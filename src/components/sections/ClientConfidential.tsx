@@ -50,7 +50,7 @@ export default function ClientConfidential({ projects }: ClientConfidentialProps
     }
 
     return (
-        <section ref={sectionRef} style={{ height: sectionHeight }} className="relative bg-matte-black border-t border-white/5">
+        <section id="work" ref={sectionRef} style={{ height: sectionHeight }} className="relative bg-matte-black border-t border-white/5">
             <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
                 {/* Header Section */}
                 <div className="flex flex-col items-center mb-16 px-4">

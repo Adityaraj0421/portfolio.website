@@ -1,18 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useStore } from "@/store/useStore";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import MagneticButton from "./MagneticButton";
-import { cn } from "@/lib/utils";
+
 
 export default function TheGate() {
     const { isGateOpen, toggleGate } = useStore();
     const containerRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
-    const [bgImage, setBgImage] = useState("");
 
     useEffect(() => {
         // Prevent scrolling when open
@@ -58,7 +57,7 @@ export default function TheGate() {
                 onClick={toggleGate}
                 className="absolute top-8 right-8 text-white/40 hover:text-white uppercase tracking-widest text-xs font-mono z-20 group"
             >
-                [ Close Protocol ]
+                [ Close ]
                 <span className="block h-[1px] w-0 group-hover:w-full bg-white transition-all duration-300" />
             </button>
 
@@ -66,47 +65,47 @@ export default function TheGate() {
             <div ref={contentRef} className="relative w-full max-w-2xl bg-matte-black border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-50" />
-                <div className="absolute top-4 left-4 text-[10px] text-white/20 font-mono">SECURE UPLINK ESTABLISHED</div>
-                <div className="absolute bottom-4 right-4 text-[10px] text-white/20 font-mono">ENCRYPTED // 2048-BIT</div>
+                <div className="absolute top-4 left-4 text-[10px] text-white/20 font-mono">LET&apos;S BUILD SOMETHING GREAT</div>
+                <div className="absolute bottom-4 right-4 text-[10px] text-white/20 font-mono">ADITYA.RAJ // 2026</div>
 
                 <div className="text-center mb-12">
-                    <h2 className="font-syne text-3xl md:text-4xl text-white font-bold uppercase mb-2">Project Inquiry</h2>
-                    <p className="font-inter text-xs text-white/50 uppercase tracking-widest">Initiate visual protocol.</p>
+                    <h2 className="font-syne text-3xl md:text-4xl text-white font-bold uppercase mb-2">Start a Project</h2>
+                    <p className="font-inter text-xs text-white/50 uppercase tracking-widest">Tell me about your vision.</p>
                 </div>
 
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                            <label className="text-[10px] text-white/60 font-mono uppercase tracking-widest pl-1">Name / Organization</label>
-                            <input type="text" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white font-syne focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all placeholder:text-white/20" placeholder="IDENTIFY" />
+                            <label className="text-[10px] text-white/60 font-mono uppercase tracking-widest pl-1">Your Name</label>
+                            <input type="text" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white font-syne focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all placeholder:text-white/20" placeholder="JOHN DOE" />
                         </div>
                         <div className="space-y-2">
-                            <label className="text-[10px] text-white/60 font-mono uppercase tracking-widest pl-1">Contact Signal</label>
-                            <input type="email" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white font-syne focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all placeholder:text-white/20" placeholder="EMAIL" />
+                            <label className="text-[10px] text-white/60 font-mono uppercase tracking-widest pl-1">Email Address</label>
+                            <input type="email" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white font-syne focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all placeholder:text-white/20" placeholder="YOU@COMPANY.COM" />
                         </div>
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-[10px] text-white/60 font-mono uppercase tracking-widest pl-1">Allocated Resources</label>
+                        <label className="text-[10px] text-white/60 font-mono uppercase tracking-widest pl-1">Project Budget</label>
                         <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white font-syne focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all appearance-none cursor-pointer">
-                            <option className="bg-matte-black text-white/50">SELECT BUDGET TIER</option>
-                            <option className="bg-matte-black text-white">$5k - $10k (MVP)</option>
-                            <option className="bg-matte-black text-white">$10k - $25k (Standard)</option>
-                            <option className="bg-matte-black text-white">$25k+ (Enterprise)</option>
+                            <option className="bg-matte-black text-white/50">SELECT A RANGE</option>
+                            <option className="bg-matte-black text-white">$5k — $10k</option>
+                            <option className="bg-matte-black text-white">$10k — $25k</option>
+                            <option className="bg-matte-black text-white">$25k+</option>
                         </select>
                     </div>
 
                     <div className="pt-8 flex justify-center w-full">
                         <MagneticButton className="w-full md:w-auto !px-12 !py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
-                            Submit Application
+                            Send Inquiry
                         </MagneticButton>
                     </div>
                 </form>
 
                 <div className="mt-8 text-center">
                     <p className="text-[10px] text-white/20 font-inter">
-                        *By applying, you agree to our NDA and exclusivity terms. <br />
-                        Acceptance rate is currently &lt; 2%.
+                        I typically respond within 24 hours. <br />
+                        Looking forward to hearing from you.
                     </p>
                 </div>
             </div>

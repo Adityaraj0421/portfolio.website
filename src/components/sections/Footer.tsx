@@ -36,12 +36,12 @@ export default function Footer() {
             {/* Bottom Bar */}
             <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/10 pt-8">
                 <div className="text-off-white/20 text-[10px] font-mono tracking-widest uppercase mb-4 md:mb-0">
-                    System Verified • All Systems Operational
+                    Designed with Intent • Crafted in Code
                 </div>
 
                 <div className="flex items-center gap-4">
                     <span className="text-off-white/20 text-[10px] font-mono tracking-widest uppercase hidden md:block">
-                        End of Protocol
+                        © 2026 Aditya Raj
                     </span>
                     <div onClick={scrollToTop}>
                         <MagneticButton className="!px-6 !py-2 text-xs border-white/10 hover:bg-white hover:text-black hover:border-white transition-all">

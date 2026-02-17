@@ -56,13 +56,13 @@ export default function Protocol() {
     }, [currentStep]);
 
     return (
-        <section ref={containerRef} className="relative w-full bg-off-white text-matte-black">
+        <section id="process" ref={containerRef} className="relative w-full bg-off-white text-matte-black">
             <div className="flex flex-col md:flex-row">
 
                 {/* STICKY LEFT: The Mechanical Counter */}
                 <div className="sticky top-0 flex h-[50vh] md:h-screen w-full md:w-1/2 flex-col justify-between p-8 md:p-16 border-b md:border-b-0 md:border-r border-matte-black/10">
                     <div className="uppercase tracking-widest text-xs font-bold text-matte-black/40">
-                        The Protocol
+                        How I Work
                     </div>
 
                     <div className="overflow-hidden">
@@ -75,7 +75,7 @@ export default function Protocol() {
                     </div>
 
                     <div className="text-sm font-inter text-matte-black/60">
-                        System Status: Active
+                        Every pixel has a purpose.
                     </div>
                 </div>
 

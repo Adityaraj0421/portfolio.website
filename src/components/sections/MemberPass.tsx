@@ -66,7 +66,7 @@ export default function MemberPass() {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative w-full min-h-screen flex flex-col items-center justify-center bg-matte-black perspective-[1000px] overflow-hidden py-24">
+        <section id="about" ref={containerRef} className="relative w-full min-h-screen flex flex-col items-center justify-center bg-matte-black perspective-[1000px] overflow-hidden py-24">
             {/* Background Context */}
             <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-20">
                 <div className="w-[500px] h-[500px] bg-white/5 blur-[120px] rounded-full animate-pulse" />
@@ -117,8 +117,15 @@ export default function MemberPass() {
                             <ul className="flex flex-col gap-3 md:gap-5">
                                 <li className="relative group/item pl-4 border-l border-white/10 hover:border-white/50 transition-colors duration-300">
                                     <div className="flex justify-between items-baseline mb-0.5">
-                                        <span className="font-syne text-base text-white/90 font-medium group-hover/item:text-white transition-colors">Product Designer</span>
-                                        <span className="font-mono text-[9px] text-white/60">Oct 24 - Aug 25</span>
+                                        <span className="font-syne text-base text-white/90 font-medium group-hover/item:text-white transition-colors">Lead Designer</span>
+                                        <span className="font-mono text-[9px] text-white/60">Jan 26 - Present</span>
+                                    </div>
+                                    <span className="font-inter text-[10px] text-white/40 group-hover/item:text-white/60 transition-colors uppercase tracking-wider">Find My Genie</span>
+                                </li>
+                                <li className="relative group/item pl-4 border-l border-white/10 hover:border-white/30 transition-colors duration-300">
+                                    <div className="flex justify-between items-baseline mb-0.5">
+                                        <span className="font-syne text-sm text-white/70 font-normal group-hover/item:text-white transition-colors">Product Designer</span>
+                                        <span className="font-mono text-[9px] text-white/30">Oct 24 - Aug 25</span>
                                     </div>
                                     <span className="font-inter text-[10px] text-white/40 group-hover/item:text-white/60 transition-colors uppercase tracking-wider">Jobmato</span>
                                 </li>

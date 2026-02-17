@@ -75,6 +75,7 @@ export const metadata: Metadata = {
 };
 
 import SiteClient from "./SiteClient";
+import Navbar from "@/components/ui/Navbar";
 
 export default function SiteLayout({
   children,
@@ -86,6 +87,7 @@ export default function SiteLayout({
       <CustomCursor />
       <DynamicBackground />
       <GrainOverlay />
+      <Navbar />
       <SiteClient>
         {children}
       </SiteClient>

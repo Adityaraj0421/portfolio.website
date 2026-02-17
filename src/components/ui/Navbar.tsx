@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
 
@@ -12,16 +13,31 @@ const navLinks = [
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [hidden, setHidden] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const { toggleGate } = useStore();
+    const pathname = usePathname();
+    const isLoading = useStore((state) => state.isLoading);
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            const currentY = window.scrollY;
+            setScrolled(currentY > 50);
+            // Hide when scrolling down past 100px, show when scrolling up
+            if (currentY > 100 && currentY > lastScrollY.current) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+            lastScrollY.current = currentY;
         };
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Only show navbar on homepage, and hide during loading
+    if (pathname !== "/" || isLoading) return null;
 
     const handleNavClick = (href: string) => {
         setMenuOpen(false);
@@ -38,10 +54,11 @@ export default function Navbar() {
         <>
             <nav
                 className={cn(
-                    "fixed top-0 left-0 w-full z-[999] transition-all duration-700 ease-[cubic-bezier(0.6,0.01,-0.05,0.95)]",
+                    "fixed top-0 left-0 w-full z-[999] transition-all duration-500 ease-[cubic-bezier(0.6,0.01,-0.05,0.95)]",
                     scrolled
                         ? "bg-matte-black/80 backdrop-blur-xl border-b border-white/5 py-4"
-                        : "bg-transparent py-6"
+                        : "bg-transparent py-6",
+                    hidden && !menuOpen && "-translate-y-full"
                 )}
             >
                 <div className="w-full flex items-center justify-between px-6 md:px-12">
